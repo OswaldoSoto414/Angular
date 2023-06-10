@@ -1,0 +1,13 @@
+{
+    "Nombre": "Oswaldo",
+    "Nombre Paterno": "Soto",
+    "Nombre Materno": "Gomez",
+    "Edad": 5,
+    "Profesion": "sofwer debeloper",
+    "Lenguajes": ["Java, PHP, Python, Ingles"],
+    "Disponibilidad_para_bellakear": true,
+    "Rango_profesional" : {
+        "Experiencia": 9999,
+        "Nivel": "Senior"
+    }
+}

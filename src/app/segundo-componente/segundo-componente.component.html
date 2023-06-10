@@ -1,0 +1,25 @@
+<p>segundo-componente works!</p>
+
+<input [(ngModel)] ="userData.name" type="text" placeholder="nombre">
+<br>
+<input [(ngModel)] ="userData.lastName" type="text" placeholder="apellido">
+<br>
+<input [(ngModel)] ="userData.age" type="text" placeholder="edad">
+<br>
+<br>
+<br>
+<br>
+
+<form [formGroup]="profileForm">
+
+<input formControlName="name" type="text" placeholder="nombre">
+<br>
+<input formControlName="lastName" type="text" placeholder="apelido">
+<br>
+<input formControlName="age" type="text" placeholder="">
+<br>
+</form>
+
+<a routerLink="home">Vamos al primer componente</a> redireccion con un link
+
+<button type="button" (click)="buttonClick()">Boton segundo componente</button>

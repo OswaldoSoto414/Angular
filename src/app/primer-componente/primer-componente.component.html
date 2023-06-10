@@ -1,0 +1,31 @@
+<p>primer-componente works!</p>
+
+<p *ngFor="let item of numbers"> {{item | calc}} </p>
+itera un array plano
+directivas de control van dentro de las etiquetas
+item es la variable de iteracion y se puede llamar como sea
+let es variable
+const es constante
+
+
+<ng-template >
+  <app-segundo-componente textinput="abc", (holamundo)="responseFromChild($event)"></app-segundo-componente>
+</ng-template>
+
+<div>
+
+  <p *ngFor="let user of users; let i= index">
+    {{i}} - {{user.name}} Age:{{user.age}}
+    date: {{user.date | date:'dd-MM-yyyy'}}
+    amount: {{user.amount| currency: 'MXN': 'symbol-narrow': '1.2-2'}}
+    taxes: {{user.amount|  currency:'MXN': 'symbol-narrow': '1.2-2'}}
+</p>
+
+<p *ngFor="let product of products; let i= index">
+  {{i}} -
+  title: {{product.title}}<!-- : Price:{{product.price}} -->
+</p>
+
+currency es una pipe ya definida de angular
+
+</div>
