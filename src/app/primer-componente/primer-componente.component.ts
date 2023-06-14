@@ -33,8 +33,13 @@ export class PrimerComponenteComponent implements OnInit{
   ngOnInit(): void {
     this.http.getproductos().subscribe((data:any) => {
       console.log('array', data);
-      this.http.putproductos().subscribe((data:any) => {
-      console.log('PUT request successful', data);
+
+      this.http.putproductos().subscribe((put:any) => {
+      console.log('PUT request successful', put);
+
+      this.http.deleteProductos().subscribe((data:any) => {
+        console.log('delete request successful', data);
+      })
       })
       this.products = data.products;
     })
