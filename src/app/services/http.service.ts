@@ -15,11 +15,11 @@ export class HttpService {
   }
 
   putproductos() {
-    return this.http.put(this.url + 'products/1', {title: 'aifon'});
+    return this.http.put(this.url + 'products/2', {title: 'aifon'});
   }
 
   deleteProductos() {
-    return this.http.delete(this.url + 'products/2');
+    return this.http.delete(this.url + 'products/3');
   }
 }
 

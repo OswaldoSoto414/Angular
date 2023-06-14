@@ -31,19 +31,30 @@ export class PrimerComponenteComponent implements OnInit{
   }; */
 
   ngOnInit(): void {
-    this.http.getproductos().subscribe((data:any) => {
-      console.log('array', data);
+    this.http.getproductos().subscribe((getdata: any) => {
+      console.log('array', getdata);
+      this.products = getdata.products;
+    });
 
-      this.http.putproductos().subscribe((put:any) => {
-      console.log('PUT request successful', put);
+      this.http.putproductos().subscribe((putData: any) => {
+        console.log('PUT request successful', putData);
+        const index = this.products.findIndex((product: any) => product.id === 2);
+          if(index) {
+            this.products[index] = putData;
+            console .log('id agregado', index);
+          }
+        });
 
-      this.http.deleteProductos().subscribe((data:any) => {
-        console.log('delete request successful', data);
-      })
-      })
-      this.products = data.products;
-    })
+        this.http.deleteProductos().subscribe((deleteData: any) => {
+          console.log('DELETE request successful', deleteData);
+          const index_b = this.products.findIndex((product: any) => product.id === 3);
+          if(index_b) {
+            this.products[index_b] = deleteData;
+            console .log('id borrado', index_b);
+          }
+        });
   }
+
 
   /* ngOninit(): void {
     this.http.putproductos(this.ProductId, this.updatedProduct).subscribe((data:any) => {
