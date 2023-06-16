@@ -47,10 +47,19 @@ export class PrimerComponenteComponent implements OnInit{
 
         this.http.deleteProductos().subscribe((deleteData: any) => {
           console.log('DELETE request successful', deleteData);
-          const index_b = this.products.findIndex((product: any) => product.id === 3);
-          if(index_b) {
-            this.products[index_b] = deleteData;
-            console .log('id borrado', index_b);
+          const index = this.products.findIndex((product: any) => product.id === 3);
+          if(index) {
+            this.products[index] = deleteData;
+            console .log('id borrado', index);
+          }
+        });
+
+        this.http.PatcheProductos().subscribe((patchData: any) => {
+          console.log('PATCH request successful', patchData);
+          const index = this.products.findIndex((product: any) => product.id === 4);
+          if(index) {
+            this.products[index] = patchData;
+            console .log('id actualizado', index);
           }
         });
   }
