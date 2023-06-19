@@ -41,7 +41,7 @@ export class PrimerComponenteComponent implements OnInit{
         const index = this.products.findIndex((product: any) => product.id === 2);
           if(index) {
             this.products[index] = putData;
-            console .log('id agregado', index);
+            console .log('indice agregado', index);
           }
         });
 
@@ -50,7 +50,7 @@ export class PrimerComponenteComponent implements OnInit{
           const index = this.products.findIndex((product: any) => product.id === 3);
           if(index) {
             this.products[index] = deleteData;
-            console .log('id borrado', index);
+            console .log('indice borrado', index);
           }
         });
 
@@ -59,7 +59,7 @@ export class PrimerComponenteComponent implements OnInit{
           const index = this.products.findIndex((product: any) => product.id === 4);
           if(index) {
             this.products[index] = patchData;
-            console .log('id actualizado', index);
+            console .log('indice actualizado', index);
           }
         });
   }

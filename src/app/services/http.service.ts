@@ -15,7 +15,7 @@ export class HttpService {
   }
 
   putproductos() {
-    return this.http.put(this.url + 'products/1', {title: 'aifon'});
+    return this.http.put(this.url + 'products/2', {title: 'aifon'});
   }
 
   deleteProductos() {
